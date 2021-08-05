@@ -51,6 +51,7 @@ window.addEventListener('load', () => {
                     if (parseInt(rocket.style.top, 10) >= 10) {
                         rocket.style.top = (parseInt(rocket.style.top, 10) -10).toString(10)+'px';
                         shuttleHeight.innerHTML = (parseInt(shuttleHeight.innerHTML, 10) + 10000);
+                        if (parseInt(rocket.style.top, 10) >= 240) {shuttleBackground.style.backgroundColor = 'blue';}
                     }
                     break;
                 case 'right':
@@ -62,6 +63,7 @@ window.addEventListener('load', () => {
                     if (parseInt(rocket.style.top, 10) <= 240) {
                         rocket.style.top = (parseInt(rocket.style.top, 10) +10).toString(10)+'px';
                         shuttleHeight.innerHTML = (parseInt(shuttleHeight.innerHTML, 10) - 10000);
+                        if (parseInt(rocket.style.top, 10) >= 250) {shuttleBackground.style.backgroundColor = 'green';}
                     }
                     break;
                 case 'left':
